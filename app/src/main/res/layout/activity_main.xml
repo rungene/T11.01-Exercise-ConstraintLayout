@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- TODO (17) Surround the Constraint layout with a ScrollView -->
 <!-- TODO (2) Replace the Relative layout with a ConstraintLayout -->
-<RelativeLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -32,5 +34,32 @@
 
     <!-- TODO (14) Create an ImageView for the barcode -->
 
-</RelativeLayout>
+
+    <TextView
+        android:id="@+id/textViewPassagerLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/passenger_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        />
+
+    <TextView
+        android:id="@+id/textViewPassagerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        tools:text="@string/passenger_name"
+        app:layout_constraintStart_toStartOf="@+id/textViewPassagerLabel"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPassagerLabel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/colorPrimary"
+        />
+
+
+</android.support.constraint.ConstraintLayout>
 
